@@ -1,0 +1,99 @@
+.Pokecard {
+  background: white;
+  border-radius: 12px;
+  padding: 0.8rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.6s ease-out;
+  animation-fill-mode: both;
+  border: 2px solid #3d7dca;
+  min-width: 110px;
+  max-width: 130px;
+  flex-shrink: 0;
+}
+
+.Pokecard:nth-child(1) { animation-delay: 0.1s; }
+.Pokecard:nth-child(2) { animation-delay: 0.2s; }
+.Pokecard:nth-child(3) { animation-delay: 0.3s; }
+.Pokecard:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.Pokecard:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(220, 10, 45, 0.4);
+  border-color: #dc0a2d;
+  cursor: pointer;
+}
+
+.Pokecard-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  color: #dc0a2d;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.Pokecard-image {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ffcb05 0%, #ffd966 100%);
+  border-radius: 50%;
+  padding: 8px;
+  transition: transform 0.3s ease;
+  border: 2px solid #3d7dca;
+}
+
+.Pokecard:hover .Pokecard-image {
+  transform: rotate(360deg);
+}
+
+.Pokecard-data {
+  margin-top: 0.5rem;
+}
+
+.Pokecard-data p {
+  margin: 0.3rem 0;
+  font-weight: 600;
+  color: #333;
+  text-transform: capitalize;
+  font-size: 0.85rem;
+}
+
+.Pokecard-data p:first-child {
+  color: #3d7dca;
+}
+
+.Pokecard-data p:last-child {
+  color: #dc0a2d;
+}
+
+@media (max-width: 768px) {
+  .Pokecard {
+    min-width: 100px;
+    max-width: 120px;
+    padding: 0.6rem;
+  }
+
+  .Pokecard-title {
+    font-size: 0.95rem;
+  }
+
+  .Pokecard-image {
+    width: 65px;
+    height: 65px;
+  }
+
+  .Pokecard-data p {
+    font-size: 0.75rem;
+  }
+}
