@@ -1,6 +1,7 @@
 {
   "name": "pokedex-app",
   "version": "0.1.0",
+  "homepage": "/pokemon-battle-arena",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",
@@ -12,6 +13,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
   },
   "browserslist": {
     "production": [

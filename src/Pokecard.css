@@ -97,3 +97,20 @@
     font-size: 0.75rem;
   }
 }
+
+.Pokecard-click-hint {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #999;
+  font-style: italic;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.Pokecard:hover .Pokecard-click-hint {
+  opacity: 1;
+}
+
+.Pokecard {
+  cursor: pointer;  /* Add cursor pointer */
+}
